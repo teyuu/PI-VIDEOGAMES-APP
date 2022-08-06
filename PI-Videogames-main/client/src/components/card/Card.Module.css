@@ -1,0 +1,100 @@
+.cardContainer {
+    width: 260px;
+    height: 330px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    /* background: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#03bac79e); */
+    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    background-color: #212121;
+    box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+    border-radius: 20px;
+    box-shadow: var(--box_shadow_card);
+
+}
+
+
+/* From uiverse.io by @alexruix */
+.card {
+    width: 190px;
+    height: 254px;
+    padding: .8em;
+    /* background: #f5f5f5; */
+    /* position: relative; */
+    /* overflow: visible; */
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    /* border: 2px solid rgba(255, 53, 53, 0.67); */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   }
+   
+   .cardImg {
+    background-color: #ffcaa6;
+    height: 40%;
+    width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+   }
+   
+   .cardInfo {
+    padding-top: 10%;
+   }
+   
+   svg {
+    width: 20px;
+    height: 20px;
+   }
+   
+   .cardFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    /* border: 2px solid black; */
+   }
+   
+   /*Text*/
+   .textTitle {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+   }
+   
+   .textBody {
+    font-size: .9em;
+    padding-bottom: 10px;
+   }
+   
+   /*Button*/
+  
+   
+   /*Hover*/
+   .cardImg:hover {
+    transform: translateY(-25%);
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+   }
+
+.ratybuton{
+    display: flex;
+    gap: 20px;
+}
+
+.cardButton{
+    background-color:#FBCA1F;
+    color: black;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    width: 100px;
+}
+   

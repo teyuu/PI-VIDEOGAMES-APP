@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+.container{
+    background-image: url('https://i.ibb.co/27qKTqn/2246.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: auto;
+    font-size: 25px;
+    color:  #ee9910;
+    font-family: 'Mouse Memoirs', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer{
+  text-align: center;
+  margin-bottom: 6em;
+}
+
+.invisibleLetter{
+  visibility: hidden;
+}
+
+.bounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+	color: white;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.letter {
+  animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  margin-top: 0.5em;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 5rem;
+}
+
+.letter:nth-of-type(1) {
+  animation-delay: -0.083333333s;
+}
+.letter:nth-of-type(3) {
+  animation-delay: 0.0833333333s;
+}
+.letter:nth-of-type(4) {
+  animation-delay: 0.1666666667s;
+}
+.letter:nth-of-type(5) {
+  animation-delay: 0.25s;
+}
+.letter:nth-of-type(6) {
+  animation-delay: 0.3333333333s;
+}
+.letter:nth-of-type(7) {
+  animation-delay: 0.4166666667s;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  }
+  100% {
+    transform: translate3d(0, -1em, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1em 0.35em;
+  }
+}
+
+.h1{
+  text-shadow: rgba(255, 255, 255, 0.301) 0 0.1em 0.35em;}
+
+  .button {
+    padding: 1.5em 5em 2em 3em;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: none;
+    margin-top: 2em;
+    background-image: url('https://i.ibb.co/R3psWNd/giphy-8.gif');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .button:hover {
+    background-color: #ee9910;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .button:active {
+    transform: translateY(-1px);
+  }
