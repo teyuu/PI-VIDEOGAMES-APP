@@ -1,38 +1,58 @@
-import React from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { getGameBySearch } from '../../actions';
-import s from './SearchBar'
+import React from "react";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getGameBySearch, getAllGames } from "../../actions";
+import TextField from "@mui/material/TextField";
+import { makeStyles } from "@mui/styles";
+import { Link, useHistory } from "react-router-dom";
 
-export default function SearchBar({setCurrentPage}) {
-    
-    const dispatch = useDispatch();
-    const [name, setName ] = useState('')
+const useStyles = makeStyles({
+  inp: {
+    backgroundColor: "white",
+    width: '22rem',
+    height: '3rem',
+    overflow: 'hidden',
+  },
+});
 
-    function handleInputChange(e){
-        e.preventDefault();
-        setName(e.target.value)
-        console.log(name)
-    }
+export default function SearchBar({ setCurrentPage }) {
 
-    function handleSubmit(e){
-        e.preventDefault();
-        dispatch(getGameBySearch(name))
-        setName('')
-        setCurrentPage(1)
-    }
-     
-    return(
-        <form>
-            <input 
-            className={s.search}
-            type="text"
-            placeholder='Search a game...'
-            value={name}
-            onChange={(e) => handleInputChange(e)}
-             />
-            <input type='submit' value="Search..." onClick={(e) => handleSubmit(e)}></input>
-        </form>
-    )
+  const history = useHistory()
+  const classes = useStyles();
+  const dispatch = useDispatch();
+  const [name, setName] = useState("");
+  
+  useEffect(()=>{
+    dispatch(getAllGames)
+  },[])
 
+  function handleInputChange(e) {
+    e.preventDefault();
+    setName(e.target.value);
+    dispatch(getGameBySearch(e.target.value));
+    setCurrentPage(1);
+    history.push('/home')
+  }
+
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   dispatch(getGameBySearch(name));
+  //   setName("");
+  //   setCurrentPage(1);
+  // }
+
+  return (
+    <form>
+      <TextField
+        className={classes.inp}
+        id="outlined-basic"
+        label="Search a game..."
+        variant="standard"
+        onChange={(e) => handleInputChange(e)}
+      />
+      {/* <Button variant="contained" size="small" onClick={(e) => handleSubmit(e)}>
+        Search
+      </Button> */}
+    </form>
+  );
 }

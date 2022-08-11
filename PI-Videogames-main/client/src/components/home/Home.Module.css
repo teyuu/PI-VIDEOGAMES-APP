@@ -1,52 +1,37 @@
  .containerHome{
     /* background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%) fixed; */
-    background-image: url('https://i.ibb.co/Qd5KrgP/imageedit-1-6094451759.jpg');
-    background-size: cover;
+    /* background-image: url('https://i.ibb.co/Qd5KrgP/imageedit-1-6094451759.jpg'); */
+    background: radial-gradient(circle, rgba(126,53,85,1) 0%, rgba(0,0,0,0.9248074229691877) 100%);
+    
     height: 100vh;
     overflow: auto;
 }
 
-
 .containerCards{
-    /* width: 100%; */
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 2rem;
+    width: 75%;
+    gap: 2.5em;
+
+    padding: 5px;
 }
 
-.container2{
-    width: 100%;
-    background-color: rgba(11, 10, 10, 0.842);
-    color: white;
-}
 
-.container3{
-    /* background-color: rgb(255, 242, 0); */
+
+.cardsAndFilters{
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    /* border: 2px solid blue; */
+    justify-content: center;
+    position: absolut;
 }
 
-.filters{
+.filter{
+     /* background-color: green;   */
+    padding: 0.5rem;
     display: flex;
-    justify-content: space-around;
-    padding: 15px;
-}
-
-.logo{
-    color: #FBCA1F;
-    font-family: inherit;
-    padding: 0.1em 1em;
-    font-weight: 900;
-    font-size: 1.5rem;
-}
-
-.buttonCrear{
-    background-color: #FBCA1F;
-    line-height: 30px;
-    border-radius: 20px;
-    width: 150px;
+    position: sticky;
+    top: 0;
+    height: 70vh;
+    width: 25%;
+    justify-content: center;
 }

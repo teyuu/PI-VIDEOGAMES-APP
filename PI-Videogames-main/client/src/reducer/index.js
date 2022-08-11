@@ -23,10 +23,14 @@ export default function rootReducer(state = inicialState, action) {
             }
 
         case   'GET_GAME_BY_SEARCH':
+
+            let nombre = action.payload === '' ? state.allGames : state.allGames.filter(e => e.name.toLowerCase().includes(action.payload.toLowerCase()))
+
             return{
                 ...state,
-                games: action.payload
+                games: nombre
             }
+            
         case 'GET_ALL_PLATFORMS':
             return{
                 ...state,

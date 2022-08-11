@@ -1,0 +1,48 @@
+
+.container{
+    background-color: #7e35554e;
+    height: 5vh;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0.5em 1em 0.5em;
+    color: white;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      height: auto;
+    }
+  }
+
+.container1{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.link{
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.containerImg{
+  width: auto;
+
+}
+
+.img{
+  width: 100px;
+}
+.separate{
+  display: flex;
+
+}

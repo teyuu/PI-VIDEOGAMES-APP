@@ -40,8 +40,8 @@
   transform: translate3d(0, 0, 0);
   margin-top: 0.5em;
   text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
-  font-family: 'Mouse Memoirs', sans-serif;
   font-size: 5rem;
+  font-weight: 900;
 }
 
 .letter:nth-of-type(1) {

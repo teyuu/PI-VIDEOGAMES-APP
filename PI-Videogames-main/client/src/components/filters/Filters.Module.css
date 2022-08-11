@@ -1,0 +1,26 @@
+.filters {
+  color: white;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  background-color: #212121;
+  padding: 1.5rem;
+  width: 15rem;
+  margin-left: 5px;
+}
+
+.underline{
+  border-bottom: 1px solid white;
+  text-align: center;
+}
+
+.options{
+  width: 50%;
+}
+
+.aligns{
+margin-top: 1em;
+}

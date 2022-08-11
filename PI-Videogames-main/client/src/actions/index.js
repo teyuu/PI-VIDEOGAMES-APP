@@ -21,18 +21,29 @@ export function getAllGenres() {
 }
 
 export function getGameBySearch(name) {
-    return async function (dispatch) {
-        try {
-            var json = await axios.get(`http://localhost:3001/videogames?name=${name}`);
-            return dispatch({
-                type: 'GET_GAME_BY_SEARCH',
-                payload: json.data
-            })
-        } catch (error) {
+
+    try{
+        return{
+            type: 'GET_GAME_BY_SEARCH',
+            payload: name
+            }
+        }catch(error){
             console.log(error)
         }
-    }
 }
+
+    // return async function (dispatch) {
+    //     try {
+    //         var json = await axios.get(`http://localhost:3001/videogames?name=${name}`);
+    //         return dispatch({
+    //             type: 'GET_GAME_BY_SEARCH',
+    //             payload: json.data
+    //         })
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
+
 
 export function filterByGenre(payload) {
     return {
