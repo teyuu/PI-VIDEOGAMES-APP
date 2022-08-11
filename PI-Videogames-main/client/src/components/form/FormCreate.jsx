@@ -163,7 +163,7 @@ export default function () {
       genres: [],
     });
 
-    alert("Personaje Creado");
+    alert("VideoGame Created");
     history.push("/home");
   }
 
@@ -185,6 +185,7 @@ export default function () {
           <div>
             <p>Name:</p>
             <input
+            className={s.thisInput}
               type="text"
               value={input.name}
               name="name"
@@ -197,6 +198,7 @@ export default function () {
           <div>
             <p>Released:</p>
             <input
+             className={s.thisInput}
               type="date"
               value={input.released}
               name="released"
@@ -208,6 +210,7 @@ export default function () {
           <div>
             <p>ImageUrl:</p>
             <input
+             className={s.thisInput}
               type="text"
               value={input.img}
               name="img"
@@ -219,6 +222,7 @@ export default function () {
           <div>
             <p>Rating:</p>
             <input
+             className={s.thisInput}
               type="number"
               value={input.rating}
               name="rating"
@@ -228,7 +232,7 @@ export default function () {
           </div>
           <div>
             <p>Genres</p>
-            <select onChange={(e) => handleSelectGenres(e)}>
+            <select  className={s.thisInput} onChange={(e) => handleSelectGenres(e)}>
               <option value="all">All</option>
               {genres?.map((e) => {
                 return (
@@ -252,7 +256,7 @@ export default function () {
           </div>
           <div>
             <p>Platforms</p>
-            <select onChange={(e) => handleSelectPlatform(e)}>
+            <select  className={s.thisInput} onChange={(e) => handleSelectPlatform(e)}>
               <option value="all">All</option>
               {platforms?.map((e) => {
                 return (

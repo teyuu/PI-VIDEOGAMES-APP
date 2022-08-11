@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getAllGames,
@@ -6,6 +6,7 @@ import {
   filterByRating,
   filterByAbc,
   filterCreated,
+  getAllGenres
 } from "../../actions/index";
 import s from "./Filters.Module.css";
 
@@ -13,11 +14,10 @@ export default function Filters({ setCurrentPage, setOrden }) {
   const dispatch = useDispatch();
   const myGenres = useSelector((state) => state.allMyGenres);
 
-  // function handleClick(e) {
-  //   e.preventDefault();
-  //   dispatch(getAllGames());
-  //   setCurrentPage(1);
-  // }
+  useEffect(() => {
+    dispatch(getAllGenres());
+  }, [dispatch]);
+ 
 
   function handleFilterByGenre(e) {
     e.preventDefault();

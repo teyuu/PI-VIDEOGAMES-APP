@@ -30,8 +30,6 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getAllGames());
-    dispatch(getAllGenres());
-    dispatch(getAllPlatforms());
   }, [dispatch]);
 
 

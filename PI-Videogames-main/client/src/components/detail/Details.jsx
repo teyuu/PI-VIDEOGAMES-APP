@@ -27,6 +27,8 @@ export default function Details(props) {
             </Link>
           </div>
 
+          <div className={s.center}>
+
           <div className={s.containerImgDescrep}>
             <div
               style={{
@@ -47,6 +49,7 @@ export default function Details(props) {
             </div>
           </div>
         </div>
+          </div>
       ) : <Loader/>}
     </div>
   );

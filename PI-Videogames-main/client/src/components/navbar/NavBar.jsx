@@ -2,7 +2,6 @@ import React from 'react'
 import s from './NavBar.Module.css'
 import { Link} from 'react-router-dom'
 import SearchBar from '../searchBar/SearchBar'
-import { getAllGames } from "../../actions";
 
 export default function NavBar({setCurrentPage}) {
 
