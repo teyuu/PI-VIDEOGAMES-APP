@@ -5,6 +5,7 @@ import { getGameBySearch, getAllGames } from "../../actions";
 import TextField from "@mui/material/TextField";
 import { makeStyles } from "@mui/styles";
 import { Link, useHistory } from "react-router-dom";
+import s from  './SearchBar.Module.css';
 
 const useStyles = makeStyles({
   inp: {
@@ -43,6 +44,7 @@ export default function SearchBar({ setCurrentPage }) {
 
   return (
     <form>
+       <img className={s.imgSearch} src="https://i.ibb.co/18gKfTf/search.png" alt="" />
       <TextField
         className={classes.inp}
         id="outlined-basic"

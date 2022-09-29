@@ -1,8 +1,7 @@
 .nums{
     display: flex;
     gap: 2.5rem;  
-    margin-top: 10px; 
-
+   margin: 10px 0 1rem 20rem;
 }
 
 .button {
@@ -10,7 +9,7 @@
     font-family: inherit;
     padding: 0.1em 1em;
     font-weight: 900;
-    font-size: 15px;
+    font-size: 1.2rem;
     border: 3px solid black;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
