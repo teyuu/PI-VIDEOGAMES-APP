@@ -1,21 +1,14 @@
 .filters {
   color: white;
-  height: 65vh;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  border-radius: 10px;
-  margin-top: 1rem;
-  background-color: #212121;
-  padding: 1.5rem;
-  width: 15rem;
-  margin-left: 5px;
+  width: 20%;
   font-size: 1.5rem;
+  padding: 0 15px;
 }
 
 .underline{
   border-bottom: 1px solid white;
   text-align: center;
+  padding-top: 10px;
 }
 
 .options{

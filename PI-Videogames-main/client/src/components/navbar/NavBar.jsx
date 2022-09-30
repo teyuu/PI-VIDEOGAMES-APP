@@ -17,9 +17,6 @@ export default function NavBar({setCurrentPage}) {
             <Link className={s.link} to='/createGame'>
             <span>CREATE</span>
             </Link>
-            <Link className={s.link} to='/about'>
-            <span>ABOUT</span>
-            </Link>
         </div>
       </div>
         <div className={s.searchBar}><SearchBar setCurrentPage={setCurrentPage}/></div>  

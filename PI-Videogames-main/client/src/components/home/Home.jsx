@@ -14,6 +14,7 @@ import Filters from "../filters/Filters";
 import NavBar from "../navbar/NavBar";
 
 import s from "./Home.Module.css";
+import Footer from "../footer/Footer";
 export default function Home() {
   const dispatch = useDispatch();
   const allGames = useSelector((state) => state.games);
@@ -23,6 +24,7 @@ export default function Home() {
   const indexOfLastGame = currentPage * gamesPerPage; //15
   const indexOfFirstGame = indexOfLastGame - gamesPerPage; //0
   const currentGames = allGames.slice(indexOfFirstGame, indexOfLastGame);
+  
 
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -36,24 +38,25 @@ export default function Home() {
 
   return (
     <div className={s.containerHome}>
-      <NavBar setCurrentPage={setCurrentPage}/>
+       <NavBar setCurrentPage={setCurrentPage}/> 
 
-      <div className={s.containerPaginado}>
+  
+
+    <div className={s.cardsAndFilters}>
+   
         <Paginado
           gamesPerPage={gamesPerPage}
           allVideoGames={allGames.length}
           paginado={paginado}
         />
-      </div>
+<div className={s.holi}>
+  {currentGames.length > 0 ? <Filters setCurrentPage={setCurrentPage} setOrden={setOrden} ></Filters> : null}
+   
 
-    <div className={s.cardsAndFilters}>
-
-      <div className={s.filter}>
-        <Filters setCurrentPage={setCurrentPage} setOrden={setOrden} ></Filters>
-      </div>
 
       {/* maps */}
       <div className={s.containerCards}>
+        
         {currentGames.length>0 ?
           currentGames.map((e) => {
             return (
@@ -69,8 +72,10 @@ export default function Home() {
             );
           }): <Loader/>} 
       </div>
+</div>
+       
     </div>
-  
+  <Footer/>
     </div>
   );
 }

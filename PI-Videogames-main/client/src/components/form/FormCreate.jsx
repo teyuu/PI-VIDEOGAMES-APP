@@ -294,12 +294,12 @@ export default function () {
             )}
           </div>
           {Object.keys(error).length ? (
-            <div>
-              <input type="submit" disabled name="Send" />
+            <div >
+              <input className={s.buttonSend} type="submit" disabled name="Send" />
             </div>
           ) : (
             <div>
-              <input type="submit" name="Send" />
+              <input className={s.buttonSend} type="submit"  name="Send" />
             </div>
           )}
         </form>
