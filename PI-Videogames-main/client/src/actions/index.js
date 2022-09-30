@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+const { API_URL } = process.env;
+
 export function getAllGames() {
     return async function (dispatch) {
-        var json = await axios.get(`/videogames`);
+        var json = await axios.get(`https://pi-videogames-app-production.up.railway.app/videogames`);
         dispatch({
             type: 'GET_ALL_GAMES',
             payload: json.data
@@ -12,7 +14,7 @@ export function getAllGames() {
 
 export function getAllGenres() {
     return async function (dispatch) {
-        var json = await axios.get(`/genres`);
+        var json = await axios.get(`https://pi-videogames-app-production.up.railway.app/genres`);
         return dispatch({
             type: 'GET_ALL_GENRES',
             payload: json.data
@@ -75,7 +77,7 @@ export function filterCreated(payload) {
 
 export function postGame(payload) {
     return async function () {
-        const createPost = await axios.post('/videogame', payload);
+        const createPost = await axios.post(`https://pi-videogames-app-production.up.railway.app/videogame`, payload);
         console.log(createPost);
         return createPost;
     }
@@ -83,7 +85,7 @@ export function postGame(payload) {
 
 export function getAllPlatforms(){
     return async function(dispatch){
-        const json = await axios.get('/platforms')
+        const json = await axios.get(`https://pi-videogames-app-production.up.railway.app/platforms`)
         const platformss = json.data
         return dispatch({
             type: 'GET_ALL_PLATFORMS',
@@ -95,7 +97,7 @@ export function getAllPlatforms(){
 export function getDetail(id){
     return async function(dispatch){
         try{
-            var json = await axios.get(`/videogames/${id}`)
+            var json = await axios.get(`https://pi-videogames-app-production.up.railway.app/videogames/${id}`)
             return dispatch({
                 type: 'GET_DETAIL',
                 payload : json.data
