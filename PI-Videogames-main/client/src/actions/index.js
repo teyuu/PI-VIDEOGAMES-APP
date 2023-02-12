@@ -4,7 +4,7 @@ const { API_URL } = process.env;
 
 export function getAllGames() {
     return async function (dispatch) {
-        var json = await axios.get(`https://pi-videogames-app-production.up.railway.app/videogames`);
+        var json = await axios.get(`https://videogames-api-bc2k.onrender.com/videogames`);
         dispatch({
             type: 'GET_ALL_GAMES',
             payload: json.data
@@ -14,7 +14,7 @@ export function getAllGames() {
 
 export function getAllGenres() {
     return async function (dispatch) {
-        var json = await axios.get(`https://pi-videogames-app-production.up.railway.app/genres`);
+        var json = await axios.get(`https://videogames-api-bc2k.onrender.com/genres`);
         return dispatch({
             type: 'GET_ALL_GENRES',
             payload: json.data
@@ -77,7 +77,7 @@ export function filterCreated(payload) {
 
 export function postGame(payload) {
     return async function () {
-        const createPost = await axios.post(`https://pi-videogames-app-production.up.railway.app/videogame`, payload);
+        const createPost = await axios.post(`https://videogames-api-bc2k.onrender.com/videogame`, payload);
         console.log(createPost);
         return createPost;
     }
@@ -85,7 +85,7 @@ export function postGame(payload) {
 
 export function getAllPlatforms(){
     return async function(dispatch){
-        const json = await axios.get(`https://pi-videogames-app-production.up.railway.app/platforms`)
+        const json = await axios.get(`https://videogames-api-bc2k.onrender.com/platforms`)
         const platformss = json.data
         return dispatch({
             type: 'GET_ALL_PLATFORMS',
@@ -97,7 +97,7 @@ export function getAllPlatforms(){
 export function getDetail(id){
     return async function(dispatch){
         try{
-            var json = await axios.get(`https://pi-videogames-app-production.up.railway.app/videogames/${id}`)
+            var json = await axios.get(`https://videogames-api-bc2k.onrender.com/videogames/${id}`)
             return dispatch({
                 type: 'GET_DETAIL',
                 payload : json.data
